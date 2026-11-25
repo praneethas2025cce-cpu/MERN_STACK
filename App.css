@@ -1,0 +1,156 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background-color: #263b70;
+  padding: 25px 15px;
+}
+
+.sidebar h2 {
+  color: white;
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  background-color: #4965a5;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 35px;
+}
+
+.main h1 {
+  color: #263b70;
+  font-size: 27px;
+}
+
+.subtitle {
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Dashboard Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background-color: white;
+  padding: 22px;
+  border: 1px solid #e5e5e5;
+  border-radius: 7px;
+}
+
+.card p {
+  color: #777;
+  font-size: 14px;
+}
+
+.card h2 {
+  color: #263b70;
+  margin-top: 15px;
+  font-size: 26px;
+}
+
+/* Section Heading */
+.section-title {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  color: #263b70;
+  font-size: 21px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #e9edf5;
+  color: #333;
+}
+
+td {
+  font-size: 14px;
+}
+
+.completed {
+  color: green;
+}
+
+.inprogress {
+  color: blue;
+}
+
+.pending {
+  color: orange;
+}
+
+/* Projects */
+.project-list {
+  background-color: white;
+  border: 1px solid #e5e5e5;
+}
+
+.project-list p {
+  padding: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Mobile Screen */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
